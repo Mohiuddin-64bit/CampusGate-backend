@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 const admissionSchema = new mongoose.Schema({
   candidateName: { type: String, required: true },
   subject: { type: String, required: true },
-  email: { type: String, required: true },
+  email: { type: String, required: true, lowercase: true },
   phone: { type: String, required: true },
   address: { type: String },
   dob: { type: Date },
