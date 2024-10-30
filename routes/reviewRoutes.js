@@ -52,16 +52,5 @@ router.put("/:id", async (req, res) => {
   }
 });
 
-// DELETE route to delete a review by ID
-router.delete("/:id", async (req, res) => {
-  const { id } = req.params;
-
-  try {
-    await Review.findByIdAndDelete(id);
-    res.status(200).json({ message: "Review deleted successfully" });
-  } catch (error) {
-    res.status(500).json({ message: "Failed to delete review", error });
-  }
-});
 
 export default router;

@@ -11,6 +11,6 @@ const collegeSchema = new mongoose.Schema({
   reviews: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Review' }],
 });
 
-const College = mongoose.model('College', collegeSchema);
-export default College;
+const College = mongoose.models.College || mongoose.model('College', collegeSchema);
 
+export default College;

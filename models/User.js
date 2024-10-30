@@ -6,7 +6,7 @@ const userSchema = new mongoose.Schema({
   password: { type: String },
   university: { type: String },
   address: { type: String },
-  reviews: [{ type: mongoose.Schema.Types.ObjectId, ref: "Review" }], // reference to reviews made by the user
+  reviews: [{ type: mongoose.Schema.Types.ObjectId, ref: "Review" }], // 
 });
 
 const User = mongoose.model("User", userSchema);
