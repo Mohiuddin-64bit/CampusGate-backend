@@ -2,6 +2,7 @@ import express from "express";
 import collegeRoutes from "./routes/collegeRoutes.js";
 import admissionRoutes from "./routes/admissionRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
+import reviews from "./routes/reviewRoutes.js";
 import connectDB from "./config/db.js";
 import dotenv from "dotenv";
 
@@ -15,6 +16,7 @@ connectDB();
 app.use("/api/colleges", collegeRoutes);
 app.use("/api/admissions", admissionRoutes);
 app.use("/api/users", userRoutes);
+app.use("/api/reviews", reviews);	
 
 // Root route
 app.get("/", (req, res) => {
