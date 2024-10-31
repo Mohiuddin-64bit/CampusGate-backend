@@ -38,3 +38,10 @@ app.get("/", (req, res) => {
 
 // Export the Express app as a Vercel-compatible handler
 export default app;
+
+// Vercel requires a default export of the server handler
+export const config = {
+  api: {
+    bodyParser: false,
+  },
+};
