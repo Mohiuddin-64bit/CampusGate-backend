@@ -13,7 +13,8 @@ app.use(express.json());
 app.use(cors());
 
 const corsOptions = {
-  origin: "http://localhost:5173",
+  // origin: "http://localhost:5173",
+  origin: "https://campus-gate.vercel.app",
   credentials: true,
 };
 app.use(cors(corsOptions));
