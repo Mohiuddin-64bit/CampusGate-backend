@@ -1,5 +1,5 @@
 import express from 'express';
-import College from '../models/College';
+import College from '../models/College.js';
 const router = express.Router();
 
 // GET all colleges
