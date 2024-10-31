@@ -13,4 +13,5 @@ const collegeSchema = new Schema({
 
 const College = model('College', collegeSchema);
 
+
 export default College;
