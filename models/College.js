@@ -1,6 +1,6 @@
-import mongoose from 'mongoose';
+import mongoose, { model, Schema } from 'mongoose';
 
-const collegeSchema = new mongoose.Schema({
+const collegeSchema = new Schema({
   name: { type: String, required: true },
   admissionDates: { type: String, required: true },
   events: { type: [String], required: true },
@@ -8,9 +8,9 @@ const collegeSchema = new mongoose.Schema({
   sports: { type: [String] },
   image: { type: String },
   ratings: { type: Number, default: 0 },
-  reviews: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Review' }],
+  reviews: [{ type: Schema.Types.ObjectId, ref: 'Review' }],
 });
 
-const College = mongoose.models.College || mongoose.model('College', collegeSchema);
+const College = model('College', collegeSchema);
 
 export default College;
