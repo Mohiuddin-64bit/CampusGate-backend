@@ -26,12 +26,17 @@ app.use("/api/admissions", admissionRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/reviews", reviews);
 
-// Root route
+// Test route
 app.get("/", (req, res) => {
-  res.send("Welcome to the Campus Gate API");
+  const serverStatus = {
+    message: "Server is running smoothly",
+    timestamp: new Date(),
+  };
+  res.json(serverStatus);
 });
+
 
 // Start server
 app.listen(process.env.PORT || 5000, () =>
-  console.log(`Server running on port ${process.env.PORT || 5000}`)
+  console.log(`Server is running on http://localhost:${process.env.PORT || 5000}`)
 );
