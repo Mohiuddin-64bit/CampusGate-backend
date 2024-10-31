@@ -36,8 +36,5 @@ app.get("/", (req, res) => {
   res.json(serverStatus);
 });
 
-
-// Start server
-app.listen(process.env.PORT || 5000, () =>
-  console.log(`Server is running on http://localhost:${process.env.PORT || 5000}`)
-);
+// Export the Express app as a Vercel-compatible handler
+export default app;
